@@ -1,28 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { Conversation } from './entities/conversation.entity';
 import { conversations } from './util';
 import { PubSub } from 'graphql-subscriptions';
 
 @Injectable()
 export class AppService {
-  public conversations: Conversation[] = [
-    {
-      id: 1,
-      name: 'Conversation 1',
-      viewers: [],
-    },
-    {
-      id: 2,
-      name: 'Conversation 2',
-      viewers: [],
-    },
-    {
-      id: 3,
-      name: 'Conversation 3',
-      viewers: [],
-    },
-  ];
-
   pubSub = new PubSub();
 
   addViewer() {
