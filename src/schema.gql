@@ -1,0 +1,27 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Conversation {
+  id: Int
+  name: String
+  viewers: [Viewer!]
+}
+
+type Mutation {
+  addViewer: Conversation!
+}
+
+type Query {
+  getConversation(conversationSid: String!): Conversation!
+  getConversations: [Conversation!]!
+}
+
+type Subscription {
+  conversationPresence(conversationSid: String!): Conversation!
+}
+
+type Viewer {
+  id: Int!
+  name: String!
+}
